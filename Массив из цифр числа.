@@ -1,0 +1,44 @@
+Дано целое положительное число. Получите массив его цифр.
+
+Напишите функцию с именем arrayOfDigits, которая принимает в качестве аргумента число n и возвращает массив его цифр. Запрещено использование методов. В решении используйте цикл do while.
+
+Примеры:
+
+функция arrayOfDigits(123456) должна возвратить [1, 2, 3, 4, 5, 6];
+функция arrayOfDigits(1000) должна возвратить [1,0,0,0];
+функция arrayOfDigits(1) должна возвратить [1].
+функция arrayOfDigits(0) должна возвратить [0].
+
+Given a positive integer. Get an array of its digits.
+
+Write a function named array Of Digits that takes the number n as an argument and returns an array of its digits. The use of methods is prohibited. In the solution, use the do while loop.
+
+Examples:
+
+the arrayofDigits(123456) function should return [1, 2, 3, 4, 5, 6];
+the arrayofDigits(1000) function should return [1,0,0,0];
+the arrayofDigits(1) function should return [1].
+the arrayofDigits(0) function should return [0].
+
+function arrayOfDigits(n){
+  let arr = [];
+  let str = n +'';
+  let i = 0;
+  do {
+    arr.push(+str[i]);
+    i++;
+} while (i < str.length);
+  return arr;
+}
+
+
+function arrayOfDigits(n){
+  let arr = [];
+  let str = n +'';
+  let i = str.length-1;
+  do {
+    arr.unshift(+str[i]);
+    i--;
+} while (i >= 0);
+  return arr;
+}
