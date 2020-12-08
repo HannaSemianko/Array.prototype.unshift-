@@ -1,0 +1,16 @@
+https://www.codewars.com/kata/reversed-sequence
+
+Build a function that returns an array of integers from n to 1 where n>0.
+
+Example : n=5 >> [5,4,3,2,1]
+
+
+const reverseSeq = n => {
+ let arr = [];
+  let i = n;
+  while (i > 0){
+    arr.push(i);
+    i--;
+  }
+  return arr;
+};
